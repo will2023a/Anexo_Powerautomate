@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Atendimento ao Cliente</title>
+</head>
+
+<body>
+    <h1>RELATÓRIO DE ATENDIMENTO AO CLIENTE – DISTRIBUIDOR</h1>
+    <p>NR. Nota Fiscal de Origem: <br>
+        Data: </p>
+
+    <h2>DADOS DO CLIENTE</h2>
+    <p>Razão Social: JOMHEDICA PRODUTOS MEDICOS E HOSPITALARES LTDA. <br>
+        Endereço ou e-mail: Av. das Águia, 340, Palhoça - SC <br>
+        Pessoa de Contato: <br>
+        Cargo: <br>
+        Telefone: <br>
+        Fax: </p>
+
+    <h2>NATUREZA DA OCORRÊNCIA</h2>
+    <p>
+        <input type="checkbox" id="naoConformidadeEntrega">
+        <label for="naoConformidadeEntrega">Não Conformidade detectada na entrega</label><br>
+
+        <input type="checkbox" id="naoConformidadeEstoque">
+        <label for="naoConformidadeEstoque">Não Conformidade detectada em estoque</label><br>
+
+        <input type="checkbox" id="naoConformidadeInstalacao">
+        <label for="naoConformidadeInstalacao">Não Conformidade detectada na instalação</label><br>
+
+        <input type="checkbox" id="reclamacaoCliente">
+        <label for="reclamacaoCliente">Reclamação de cliente</label><br>
+
+        <input type="checkbox" id="suspeitaEventoAdverso">
+        <label for="suspeitaEventoAdverso">Suspeita de Evento Adverso</label><br>
+
+        <input type="checkbox" id="suspeitaObito">
+        <label for="suspeitaObito">Suspeita de Óbito ou Ameaça à Saúde Pública</label><br>
+
+        <input type="checkbox" id="outra">
+        <label for="outra">Outra. Descrever:</label>
+        <input type="text" id="outraDescricao">
+    </p>
+
+    <h2>DADOS DO RECLAMANTE</h2>
+    <p>
+        Cliente/ Reclamante: <br>
+        Endereço ou e-mail: <br>
+        Pessoa de Contato: <br>
+        CNPJ: <br>
+        Telefone: <br>
+        Cel: <br>
+    </p>
+
+    <h2>Descrição do Produto</h2>
+    <p>
+        Código do Produto: <br>
+        Nº de série/ lote: <br>
+        Data da ocorrência: <br>
+        Quantidade Afetada: <br>
+    </p>
+
+    <h2>DESCRIÇÃO DA OCORRÊNCIA</h2>
+    <p></p>
+
+    <h2>QUESTIONÁRIO DE INFORMAÇÕES ADICIONAIS</h2>
+    <p>
+        O dispositivo falhou durante um procedimento/operação?<br>
+        <input type="radio" id="simFalha" name="falhaProcedimento" value="sim">
+        <label for="simFalha">Sim</label>
+        <input type="radio" id="naoFalha" name="falhaProcedimento" value="nao">
+        <label for="naoFalha">Não</label>
+        <input type="radio" id="naoAplicavelFalha" name="falhaProcedimento" value="naoAplicavel">
+        <label for="naoAplicavelFalha">N/A</label><br>
+
+        Data(s) do Evento: <br>
+        <input type="text" id="dataEvento">
+
+        <p>Tipo de procedimento sendo realizado:</p>
+        <textarea id="tipoProcedimento"></textarea>
+
+        <p>Obs:</p>
+        <textarea id="obs"></textarea>
+
+        <p>Foi um procedimento de reoperação?<br>
+            <input type="radio" id="simReoperacao" name="reoperacao" value="sim">
+            <label for="simReoperacao">Sim</label>
+            <input type="radio" id="naoReoperacao" name="reoperacao" value="nao">
+            <label for="naoReoperacao">Não</label></p>
+
+        <p>Alguma perda / dano ao paciente?<br>
+            <input type="checkbox" id="perdaTotal">
+            <label for="perdaTotal">Perda total</label><br>
+
+            <input type="checkbox" id="perdaIntermitente">
+            <label for="perdaIntermitente">Perda intermitente</label><br>
+
+            <input type="checkbox" id="indeterminadoPerda">
+            <label for="indeterminadoPerda">Indeterminado</label></p>
+
+        <p>Alguma lesão a paciente/usuário ou outra pessoa?<br>
+            <input type="radio" id="lesaoSim" name="lesao" value="sim">
+            <label for="lesaoSim">Sim</label>
+            <input type="radio" id="lesaoNao" name="lesao" value="nao">
+            <label for="lesaoNao">Não</label></p>
+
+        <p>Descrição da lesão:<br>
+            <textarea id="descricaoLesao"></textarea></p>
+
+        <p>O procedimento foi concluído?<br>
+            <input type="radio" id="concluidoSim" name="concluido" value="sim">
+            <label for="concluidoSim">Sim</label>
+            <input type="radio" id="concluidoNao" name="concluido" value="nao">
+            <label for="concluidoNao">Não</label></p>
+
+        <p>O mesmo dispositivo foi utilizado para concluir o procedimento?<br>
+            <input type="radio" id="mesmoDispositivoSim" name="mesmoDispositivo" value="sim">
+            <label for="mesmoDispositivoSim">Sim</label>
+            <input type="radio" id="mesmoDispositivoNao" name="mesmoDispositivo" value="nao">
+            <label for="mesmoDispositivoNao">Não</label><br>
+            Se não, mencione a Descrição, Modelo; e Nº. de lote e/ou Serie dos dispositivos utilizados para finalizar o procedimento:<br>
+            <textarea id="descricaoDispositivo"></textarea></p>
+
+        <p>Algum outro dispositivo foi substituído durante o procedimento?<br>
+            <input type="radio" id="substituidoSim" name="substituido" value="sim">
+            <label for="substituidoSim">Sim</label>
+            <input type="radio" id="substituidoNao" name="substituido" value="nao">
+            <label for="substituidoNao">Não</label><br>
+            Se sim, mencione a Descrição, Modelo; e Nº. de lote e/ou Serie dos dispositivos utilizados:<br>
+            <textarea id="descricaoSubstituido"></textarea></p>
+
+        <p>Documentos em anexo?<br>
+            <input type="radio" id="documentosAnexoSim" name="documentosAnexo" value="sim">
+            <label for="documentosAnexoSim">Sim</label>
+            <input type="radio" id="documentosAnexoNao" name="documentosAnexo" value="nao">
+            <label for="documentosAnexoNao">Não</label></p>
+    </p>
+</body>
+
+</html>
